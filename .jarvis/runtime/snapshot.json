@@ -1,0 +1,25 @@
+{
+  "snapshot_id": "snap_bf748258",
+  "timestamp": "2026-10-02T18:13:48.196279+00:00",
+  "runtime_state": {
+    "runtime_id": "rt_3fea3371",
+    "runtime_version": "17.0.0",
+    "status": "RUNNING",
+    "recovery_state": "NONE",
+    "started_at": "2026-10-02T18:11:36.948157+00:00",
+    "updated_at": "2026-10-02T18:11:36.948169+00:00",
+    "python_process_id": null,
+    "electron_connection_status": "DISCONNECTED",
+    "emergency_stop_state": false,
+    "active_task_id": null,
+    "active_context_id": null,
+    "active_execution_id": null,
+    "last_event_id": null,
+    "last_event_timestamp": null,
+    "recovery_required": false
+  },
+  "active_task": null,
+  "approval_status": null,
+  "execution_status": null,
+  "last_event_sequence": 4
+}

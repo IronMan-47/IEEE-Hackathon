@@ -1,0 +1,19 @@
+JARVIS - The Living Canvas (Phase 21 Final Release Candidate)
+Build Timestamp: 2026-10-02T19:50Z
+
+==================================================
+EXECUTABLE HASHES (SHA256)
+==================================================
+
+jarvis-agent.exe (Standalone Bundled Python Backend)
+SHA256: DBFCEFD1F0D6F6272D07278604ED0CC95BB4D97E9287A9A27ECA6A2EBE8E398C
+
+jarvis-agent.exe (Packaged Embedded Python Backend)
+SHA256: DBFCEFD1F0D6F6272D07278604ED0CC95BB4D97E9287A9A27ECA6A2EBE8E398C
+*Match Confirmed.*
+
+JARVIS - The Living Canvas 0.1.0.exe (Portable Windows Build)
+SHA256: C02409889E98CB182724A93234D6222605B43C3FF3CBC46561A82800A782EC02
+
+JARVIS - The Living Canvas Setup 0.1.0.exe (NSIS Installer)
+SHA256: ADCC8F9031F16012B4A34F76AC6B5E4F604860437430E535F70634F96F00FF83

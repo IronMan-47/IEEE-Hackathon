@@ -1,0 +1,66 @@
+{
+  "name": "jarvis-living-canvas",
+  "version": "0.1.0",
+  "description": "JARVIS — Human-Controlled Multimodal AI Computer Agent",
+  "main": "dist/apps/desktop/main/main.js",
+  "scripts": {
+    "copy-assets": "node -e \"require('fs').mkdirSync('dist/apps/desktop/renderer', {recursive:true}); require('fs').copyFileSync('src/apps/desktop/renderer/index.html', 'dist/apps/desktop/renderer/index.html'); require('fs').copyFileSync('src/apps/desktop/renderer/styles.css', 'dist/apps/desktop/renderer/styles.css');\"",
+    "build:renderer": "npx esbuild src/apps/desktop/renderer/app.ts --bundle --outfile=dist/apps/desktop/renderer/app.js --format=iife --platform=browser --target=chrome120 --sourcemap",
+    "build:tsc": "tsc",
+    "build": "tsc && npm run copy-assets && npm run build:renderer",
+    "start": "npm run build && electron .",
+    "dev": "npm run build && electron .",
+    "test": "vitest run",
+    "package": "npm run build && electron-builder --win"
+  },
+  "build": {
+    "appId": "com.jarvis.livingcanvas",
+    "productName": "JARVIS - The Living Canvas",
+    "directories": {
+      "output": "release"
+    },
+    "win": {
+      "target": [
+        "nsis",
+        "portable"
+      ]
+    },
+    "nsis": {
+      "oneClick": false,
+      "allowToChangeInstallationDirectory": true,
+      "createDesktopShortcut": true
+    },
+    "extraResources": [
+      {
+        "from": "dist-python/jarvis-agent.exe",
+        "to": "jarvis-agent.exe"
+      }
+    ],
+    "files": [
+      "dist/**/*",
+      "package.json"
+    ]
+  },
+  "keywords": [
+    "jarvis",
+    "ai-agent",
+    "living-canvas",
+    "electron",
+    "windows-agent"
+  ],
+  "author": "JARVIS Engineering Team",
+  "license": "MIT",
+  "devDependencies": {
+    "@types/node": "^22.13.1",
+    "electron": "^34.5.8",
+    "electron-builder": "^26.15.3",
+    "esbuild": "^0.28.2",
+    "typescript": "^5.7.3",
+    "vitest": "^3.0.5"
+  },
+  "allowScripts": {
+    "esbuild@0.28.2": true,
+    "electron-winstaller@5.4.0": true,
+    "electron@34.5.8": true
+  }
+}
